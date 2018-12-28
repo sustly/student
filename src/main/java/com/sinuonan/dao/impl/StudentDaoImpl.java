@@ -3,7 +3,6 @@ package com.sinuonan.dao.impl;
 import com.sinuonan.bean.StudentInfo;
 import com.sinuonan.dao.StudentDao;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

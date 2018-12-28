@@ -2,10 +2,6 @@ package com.sinuonan.bean;
 
 import javax.persistence.*;
 
-/**
- * @author liyue
- * @date 2018/12/28 14:07
- */
 @Entity
 @Table(name = "teacher_info", schema = "student", catalog = "")
 public class TeacherInfo {
@@ -13,7 +9,7 @@ public class TeacherInfo {
     private String password;
 
     @Id
-    @Column(name = "id", nullable = false, length = 20)
+    @Column(name = "id")
     public String getId() {
         return id;
     }
@@ -23,7 +19,7 @@ public class TeacherInfo {
     }
 
     @Basic
-    @Column(name = "password", nullable = true, length = 30)
+    @Column(name = "password")
     public String getPassword() {
         return password;
     }

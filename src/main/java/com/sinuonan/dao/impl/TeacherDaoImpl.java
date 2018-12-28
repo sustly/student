@@ -1,9 +1,9 @@
 package com.sinuonan.dao.impl;
 
+import com.sinuonan.bean.StudentInfo;
 import com.sinuonan.bean.TeacherInfo;
 import com.sinuonan.dao.TeacherDao;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -14,7 +14,6 @@ import java.util.List;
 public class TeacherDaoImpl extends HibernateDaoSupport implements TeacherDao {
     public String findPassowrdByid(String id) {
         String hql = "select password from TeacherInfo where id="+"'"+id+"'";
-        System.out.println(hql);
         List<String> list = (List<String>) this.getHibernateTemplate().find(hql);
         if (list==null || list.size()==0){
             return null;
@@ -25,5 +24,15 @@ public class TeacherDaoImpl extends HibernateDaoSupport implements TeacherDao {
 
     public void save(TeacherInfo info) {
         this.getHibernateTemplate().save(info);
+    }
+
+    public List<StudentInfo> findStudentByTeacherid(String id) {
+        String hql = "from StudentInfo where teacherId="+"'"+id+"'";
+        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().find(hql);
+        if (list==null || list.size()==0){
+            return null;
+        }else {
+            return list;
+        }
     }
 }

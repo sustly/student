@@ -2,22 +2,18 @@ package com.sinuonan.bean;
 
 import javax.persistence.*;
 
-/**
- * @author liyue
- * @date 2018/12/28 11:22
- */
 @Entity
-@Table(name = "student_info", schema = "student")
+@Table(name = "student_info", schema = "student", catalog = "")
 public class StudentInfo {
     private String uuid;
     private String name;
     private Integer schoolId;
     private String gender;
     private String className;
-    private Integer teacherId;
+    private String teacherId;
 
     @Id
-    @Column(name = "uuid", nullable = false, length = 64)
+    @Column(name = "uuid")
     public String getUuid() {
         return uuid;
     }
@@ -27,7 +23,7 @@ public class StudentInfo {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = 20)
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -37,7 +33,7 @@ public class StudentInfo {
     }
 
     @Basic
-    @Column(name = "schoolId", nullable = true)
+    @Column(name = "schoolId")
     public Integer getSchoolId() {
         return schoolId;
     }
@@ -47,7 +43,7 @@ public class StudentInfo {
     }
 
     @Basic
-    @Column(name = "gender", nullable = true, length = 20)
+    @Column(name = "gender")
     public String getGender() {
         return gender;
     }
@@ -57,7 +53,7 @@ public class StudentInfo {
     }
 
     @Basic
-    @Column(name = "className", nullable = true, length = 20)
+    @Column(name = "className")
     public String getClassName() {
         return className;
     }
@@ -67,12 +63,12 @@ public class StudentInfo {
     }
 
     @Basic
-    @Column(name = "teacherId", nullable = true)
-    public Integer getTeacherId() {
+    @Column(name = "teacherId")
+    public String getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(Integer teacherId) {
+    public void setTeacherId(String teacherId) {
         this.teacherId = teacherId;
     }
 
