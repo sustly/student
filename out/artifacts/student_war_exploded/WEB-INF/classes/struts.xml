@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="test" namespace="/" extends="struts-default">
+        <action name="teacher_login" class="com.sinuonan.controller.LoginAction" method="loginBy">
+            <result name="success">/student_list.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+        <action name="login" class="com.sinuonan.controller.LoginAction" method="login">
+            <result name="success">/login.jsp</result>
+        </action>
+    </package>
+    <constant name="struts.objectFactory" value="spring" />
+</struts>
