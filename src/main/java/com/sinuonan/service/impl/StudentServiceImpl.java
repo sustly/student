@@ -6,12 +6,14 @@ import com.sinuonan.service.StudentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.transaction.Transactional;
 
 /**
  * @author liyue
  * @date 2018/12/28 13:07
  */
 @Service("StudentService")
+@Transactional
 public class StudentServiceImpl implements StudentService {
     @Resource(name = "StudentDao")
     private StudentDao dao;

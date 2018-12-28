@@ -11,6 +11,10 @@
         <action name="login" class="com.sinuonan.controller.LoginAction" method="login">
             <result name="success">/login.jsp</result>
         </action>
+        <action name="register" class="com.sinuonan.controller.RegisterAction" method="register">
+            <result name="success">/login.jsp</result>
+            <result name="error">/register.jsp</result>
+        </action>
     </package>
     <constant name="struts.objectFactory" value="spring" />
 </struts>

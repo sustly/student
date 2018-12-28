@@ -6,8 +6,12 @@
   <session-factory>
     <!-- ###################Hibernate3 基本配置信息 ############# -->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/student</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/student?useSSL=false</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <!-- 配置用户名 -->
+    <property name="hibernate.connection.username">root</property>
+    <!-- 配置密码 -->
+    <property name="hibernate.connection.password">123456</property>
     <!-- 连接数据库，数据库名称 -->
     <!-- 是否输出sql语句 Could not load java.util.ListIterator. The eventual following
         stack trace is caused by an error thrown for debugging purposes as well as  170.12.190.54
@@ -45,6 +49,7 @@
     <property name="connection.autoReconnect">true</property>
     <property name="connection.autoReconnectForPools">true</property>
     <property name="connection.is-connection-validation-required">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
 
 
     <!-- ##########################BO对象映射配置########################### -->
