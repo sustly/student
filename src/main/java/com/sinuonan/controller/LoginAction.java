@@ -16,6 +16,7 @@ public class LoginAction extends ActionSupport {
     private String id;
     private String password;
 
+
     @Resource(name = "teacherService")
     private TeacherService service;
 
