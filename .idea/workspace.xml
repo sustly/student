@@ -46,16 +46,18 @@
     <session id="343546895">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.54" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="java" value="1095" />
+          <entry key="java" value="1096" />
           <entry key="jsp" value="98" />
           <entry key="txt" value="24" />
           <entry key="xml" value="109" />
@@ -63,7 +65,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1095" />
+          <entry key="JAVA" value="1096" />
           <entry key="JSP" value="98" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="XML" value="109" />
@@ -72,7 +74,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="20" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="22" />
+          <entry key="jpg" value="2" />
           <entry key="jsp" value="5" />
           <entry key="properties" value="1" />
           <entry key="sql" value="1" />
@@ -82,7 +86,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="20" />
+          <entry key="Git file" value="1" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="22" />
           <entry key="JSP" value="5" />
           <entry key="Properties" value="1" />
           <entry key="Scratch" value="1" />
@@ -94,108 +100,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/StudentServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/bean/StudentInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#516#517#0" expanded="true" />
-                <element signature="e#565#566#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/controller/LoginAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
-                <element signature="e#695#696#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/TeacherServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/dao/impl/TeacherDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="69" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/dao/impl/StudentDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="117">
+              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/controller/LoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="95">
+              <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding>
+                <element signature="e#598#599#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,8 +166,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/TeacherServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/StudentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sinuonan/dao/impl/TeacherDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sinuonan/controller/LoginAction.java" />
         <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sinuonan/controller/LoginAction.java" />
       </list>
     </option>
   </component>
@@ -267,8 +191,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -277,6 +201,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,11 +303,16 @@
               <item name="student" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="student" type="b2602c69:ProjectViewProjectNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,7 +326,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -544,7 +474,9 @@
       <option name="presentableId" value="Default" />
       <updated>1545964235697</updated>
       <workItem from="1545964244355" duration="16023000" />
-      <workItem from="1545986216476" duration="2655000" />
+      <workItem from="1545986216476" duration="2986000" />
+      <workItem from="1545989215860" duration="10000" />
+      <workItem from="1545989295830" duration="364000" />
     </task>
     <task id="LOCAL-00001" summary="the first commit">
       <created>1545988110354</created>
@@ -571,7 +503,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18678000" />
+    <option name="totallyTimeSpent" value="19383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -585,10 +517,9 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Problems" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.3133236" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.3133236" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.34114203" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -605,6 +536,7 @@
       <window_info anchor="bottom" id="JRebel Executor" order="16" />
       <window_info anchor="bottom" id="JRebel Console" order="17" sideWeight="0.50067025" side_tool="true" weight="0.39970717" />
       <window_info anchor="bottom" id="Messages" order="18" weight="0.329429" />
+      <window_info anchor="bottom" id="Problems" order="19" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -667,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/bean/StudentInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -723,46 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="69" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/dao/impl/StudentDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/StudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/service/TeacherService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -797,20 +682,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/TeacherServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/StudentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="152">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/dao/impl/TeacherDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
+        <state relative-caret-position="285">
           <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -818,16 +708,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/controller/LoginAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        <state relative-caret-position="855">
+          <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="69" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/dao/impl/StudentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,6 +736,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/login_02.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/image/login_01.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/service/impl/TeacherServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/bean/StudentInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sinuonan/controller/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding>
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
