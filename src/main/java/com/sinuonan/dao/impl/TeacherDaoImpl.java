@@ -7,10 +7,6 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.util.List;
 
-/**
- * @author liyue
- * @date 2018/12/28 14:17
- */
 public class TeacherDaoImpl extends HibernateDaoSupport implements TeacherDao {
     public String findPassowrdByid(String id) {
         String hql = "select password from TeacherInfo where id="+"'"+id+"'";

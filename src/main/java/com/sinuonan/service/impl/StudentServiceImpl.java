@@ -34,4 +34,12 @@ public class StudentServiceImpl implements StudentService {
     public List<StudentInfo> findStudentByTeacherid(String id) {
         return dao.findStudentByTeacherid(id);
     }
+
+    public void updateStudentByname(String name, Integer schoolId) {
+        dao.updateStudentByname(name, schoolId);
+    }
+
+    public void deleteStudentByName(String name) {
+        dao.deleteStudentByName(name);
+    }
 }

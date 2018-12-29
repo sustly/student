@@ -16,6 +16,15 @@
             <result name="error">/register.jsp</result>
         </action>
         <action name="addStudent" class="com.sinuonan.controller.addStudentAction" method="addStudent">
+            <result name="success" type="redirect">showView</result>
+        </action>
+        <action name="updateSchoolId" class="com.sinuonan.controller.updateAction" method="updateByname">
+            <result name="success" type="redirect">showView</result>
+        </action>
+        <action name="deleteByName" class="com.sinuonan.controller.deleteAction" method="deleteByName">
+            <result name="success" type="redirect">showView</result>
+        </action>
+        <action name="showView" class="com.sinuonan.controller.ShowAction" method="showView">
             <result name="success">/student_list.jsp</result>
         </action>
     </package>

@@ -10,4 +10,8 @@ public interface StudentDao {
     void deleteStudentByUuid(String uuid);
     StudentInfo findStudentByName(String name);
     List<StudentInfo> findStudentByTeacherid(String id);
+
+    void updateStudentByname(String name, Integer schoolId);
+
+    void deleteStudentByName(String name);
 }

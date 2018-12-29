@@ -6,10 +6,6 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.util.List;
 
-/**
- * @author liyue
- * @date 2018/12/28 11:06
- */
 public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
 
     public void addStudent(StudentInfo st) {
@@ -21,13 +17,13 @@ public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
     }
 
     public void deleteStudentByUuid(String uuid) {
-        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().find("from StudentInfo where uuid=?", uuid);
+        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().find("from StudentInfo where uuid=?0", uuid);
         StudentInfo info = list.get(0);
         this.getHibernateTemplate().delete(info);
     }
 
     public StudentInfo findStudentByName(String name) {
-        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().find("from StudentInfo where name=?", name);
+        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().find("from StudentInfo where name=?0", name);
         StudentInfo info = list.get(0);
         return info;
     }
@@ -40,5 +36,16 @@ public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
         }else {
             return list;
         }
+    }
+
+    public void updateStudentByname(String name, Integer schoolId) {
+        StudentInfo student = findStudentByName(name);
+        student.setSchoolId(schoolId);
+        this.getHibernateTemplate().update(student);
+    }
+
+    public void deleteStudentByName(String name) {
+        StudentInfo student = findStudentByName(name);
+        this.getHibernateTemplate().delete(student);
     }
 }
