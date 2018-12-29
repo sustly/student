@@ -56,10 +56,6 @@
 
     <mapping class="com.sinuonan.bean.StudentInfo"/>
     <mapping class="com.sinuonan.bean.TeacherInfo"/>
-      <mapping class="com.sinuonan.bean.StudentInfo"/>
-      <mapping class="com.sinuonan.bean.TeacherInfo"/>
-    <mapping class="com.sinuonan.bean.StudentInfo"/>
-    <mapping class="com.sinuonan.bean.TeacherInfo"/>
 
   </session-factory>
 </hibernate-configuration>

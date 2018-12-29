@@ -9,6 +9,10 @@ import org.springframework.stereotype.Controller;
 import javax.annotation.Resource;
 import java.util.UUID;
 
+/**
+ * 添加学生信息
+ * 该类中的字段与jsp页面一一对应，可接收jsp请求的参数
+ */
 @Controller
 public class addStudentAction extends ActionSupport {
     private String name;
@@ -34,12 +38,18 @@ public class addStudentAction extends ActionSupport {
     public void setSchoolId(Integer schoolId) {
         this.schoolId = schoolId;
     }
+
+    /**
+     * 添加学生
+     * @return
+     */
     public String addStudent(){
         StudentInfo info = new StudentInfo();
         info.setClassName(className);
         info.setGender(gender);
         info.setSchoolId(schoolId);
         info.setName(name);
+        //从session中获得teacher的id
         String teacherId = (String) ServletActionContext.getRequest().getSession().getAttribute("id");
         info.setTeacherId(teacherId);
         info.setUuid(UUID.randomUUID().toString());

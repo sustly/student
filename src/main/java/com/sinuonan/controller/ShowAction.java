@@ -14,6 +14,7 @@ public class ShowAction extends ActionSupport {
     @Resource(name = "StudentService")
     private StudentService studentService;
     public String showView(){
+        //从session中获得id，用于查询
         String name = (String) ServletActionContext.getRequest().getSession().getAttribute("id");
         List<StudentInfo> list = studentService.findStudentByTeacherid(name);
         ServletActionContext.getRequest().setAttribute("list",list);

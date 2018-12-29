@@ -3,6 +3,7 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
+    <!--配置action-->
     <package name="test" namespace="/" extends="struts-default">
         <action name="teacher_login" class="com.sinuonan.controller.LoginAction" method="loginBy">
             <result name="success">/student_list.jsp</result>
@@ -28,5 +29,6 @@
             <result name="success">/student_list.jsp</result>
         </action>
     </package>
+    <!--将action交给spring管理-->
     <constant name="struts.objectFactory" value="spring" />
 </struts>

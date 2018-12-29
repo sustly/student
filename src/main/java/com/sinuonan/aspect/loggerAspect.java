@@ -17,11 +17,18 @@ public class loggerAspect {
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
+    /**
+     * 定义切点位置
+     */
     @Pointcut(value = "execution(* com.sinuonan.dao.impl..*(..))")
     public void pointCut() {
     }
 
-
+    /**
+     * 后置通知
+     * @param joinPoint
+     * @param retVal
+     */
     @AfterReturning(pointcut = "pointCut()", argNames = "joinPoint, retVal", returning = "retVal")
     public void afterReturn(JoinPoint joinPoint, Object retVal) {
         String className = joinPoint.getSignature().getName();
@@ -98,7 +105,7 @@ public class loggerAspect {
     }
 
     /**
-     * 判断操作的中文名（根据自己项目而定）
+     * 判断操作的中文名
      *
      * @param methodName
      * @return

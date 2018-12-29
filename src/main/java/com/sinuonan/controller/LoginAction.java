@@ -32,11 +32,13 @@ public class LoginAction extends ActionSupport {
     public String login(){
         return SUCCESS;
     }
+
     public String loginBy(){
         String t_password = teacherService.findPassowrdByid(id);
         if (password.equals(t_password)){
             List<StudentInfo> list = studentService.findStudentByTeacherid(id);
             HttpServletRequest request = ServletActionContext.getRequest();
+            //teacher登陆成功后将id存入session中
             request.getSession().setAttribute("id",id);
             request.setAttribute("list",list);
             return SUCCESS;
