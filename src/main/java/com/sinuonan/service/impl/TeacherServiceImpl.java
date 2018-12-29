@@ -10,10 +10,6 @@ import javax.annotation.Resource;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * @author liyue
- * @date 2018/12/28 14:53
- */
 @Service("teacherService")
 @Transactional
 public class TeacherServiceImpl implements TeacherService {

@@ -11,10 +11,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-/**
- * @author liyue
- * @date 2018/12/28 13:32
- */
 @Controller
 public class LoginAction extends ActionSupport {
     private String id;

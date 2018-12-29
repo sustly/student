@@ -11,10 +11,6 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-/**
- * @author liyue
- * @date 2018/12/4 14:43
- */
 @Component("loggerAspect")
 @Aspect
 public class loggerAspect {
