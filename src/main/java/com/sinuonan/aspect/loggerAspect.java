@@ -17,7 +17,7 @@ public class loggerAspect {
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut(value = "execution(* com.sinuonan.dao.impl.*(..))")
+    @Pointcut(value = "execution(* com.sinuonan.dao.impl..*(..))")
     public void pointCut() {
     }
 
@@ -45,7 +45,7 @@ public class loggerAspect {
         }
         String s = rs.toString().substring(0, rs.toString().length() - 2);
 
-        log.info("参数：[{}]", s);
+        log.info("参数：[{}]  返回值：[{}]", s ,retVal);
 
     }
 
@@ -104,11 +104,16 @@ public class loggerAspect {
      * @return
      */
     private String getMethodChineseName(String methodName) {
-        if (methodName.endsWith("find")) {
+        if (methodName.startsWith("find")) {
             return "查找数据";
-        }else {
+        }else if (methodName.startsWith("delete")){
+            return "删除数据";
+        } else if (methodName.startsWith("update")){
+            return "更新数据";
+        } else if (methodName.startsWith("add")){
+            return "添加数据";
+        } else {
             return "";
         }
     }
-
 }

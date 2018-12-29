@@ -99,4 +99,16 @@ public class StudentInfo {
         result = 31 * result + (teacherId != null ? teacherId.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "StudentInfo{" +
+                "uuid='" + uuid + '\'' +
+                ", name='" + name + '\'' +
+                ", schoolId=" + schoolId +
+                ", gender='" + gender + '\'' +
+                ", className='" + className + '\'' +
+                ", teacherId='" + teacherId + '\'' +
+                '}';
+    }
 }
