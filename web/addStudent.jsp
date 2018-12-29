@@ -24,6 +24,10 @@
                     alert("学号不能为空");
                     return false;
                 }
+                if(isNaN(schoolId.value)){
+                    alert("格式错误！");
+                    return false;
+                }
                 self.location=document.referrer;//去另一个页面刷新
                 return true;
             }
