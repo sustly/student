@@ -37,6 +37,7 @@ public class LoginAction extends ActionSupport {
         if (password.equals(t_password)){
             List<StudentInfo> list = studentService.findStudentByTeacherid(id);
             HttpServletRequest request = ServletActionContext.getRequest();
+            request.getSession().setAttribute("id",id);
             request.setAttribute("list",list);
             return SUCCESS;
         }else {

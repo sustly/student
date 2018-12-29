@@ -15,6 +15,9 @@
             <result name="success">/login.jsp</result>
             <result name="error">/register.jsp</result>
         </action>
+        <action name="addStudent" class="com.sinuonan.controller.addStudentAction" method="addStudent">
+            <result name="success">/student_list.jsp</result>
+        </action>
     </package>
     <constant name="struts.objectFactory" value="spring" />
 </struts>
