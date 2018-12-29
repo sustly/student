@@ -24,7 +24,4 @@ public class TeacherServiceImpl implements TeacherService {
         dao.save(info);
     }
 
-    public List<StudentInfo> findStudentByTeacherid(String id) {
-        return dao.findStudentByTeacherid(id);
-    }
 }

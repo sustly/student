@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service("StudentService")
 @Transactional
@@ -28,5 +29,9 @@ public class StudentServiceImpl implements StudentService {
 
     public StudentInfo findStudentByName(String name) {
         return dao.findStudentByName(name);
+    }
+
+    public List<StudentInfo> findStudentByTeacherid(String id) {
+        return dao.findStudentByTeacherid(id);
     }
 }

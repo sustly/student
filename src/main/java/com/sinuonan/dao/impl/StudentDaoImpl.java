@@ -31,4 +31,14 @@ public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
         StudentInfo info = list.get(0);
         return info;
     }
+
+    public List<StudentInfo> findStudentByTeacherid(String id) {
+        String hql = "from StudentInfo where teacherId="+"'"+id+"'";
+        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().find(hql);
+        if (list==null || list.size()==0){
+            return null;
+        }else {
+            return list;
+        }
+    }
 }

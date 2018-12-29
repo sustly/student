@@ -8,5 +8,4 @@ import java.util.List;
 public interface TeacherDao {
     String findPassowrdByid(String id);
     void save(TeacherInfo info);
-    List<StudentInfo> findStudentByTeacherid(String id);
 }
