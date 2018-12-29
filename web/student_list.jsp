@@ -17,11 +17,11 @@
 <script type="text/javascript">
     function check(form){
         with(form){
-            if(bookCount.value == ""){
-                alert("请输入更新数量！");
+            if(schoolId.value == ""){
+                alert("请输入学号！");
                 return false;
             }
-            if(isNaN(bookCount.value)){
+            if(isNaN(schoolId.value)){
                 alert("格式错误！");
                 return false;
             }
