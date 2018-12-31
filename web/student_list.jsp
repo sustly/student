@@ -39,18 +39,14 @@
 <body>
 	<table align="center" width="600" border="1" height="180" bordercolor="white" bgcolor="black" cellpadding="1" cellspacing="1">
 		<tr bgcolor="white">
-			<td align="center" colspan="5">
+			<td align="center" colspan="6">
 				<h2>所有学生信息</h2>
 			</td>
-			<td width="0"></td>
 		</tr>
 		<tr bgcolor="#b8860b">
-			<th align="center" colspan="3" >
+			<th align="center" colspan="6" >
 				<a href="addStudent.jsp"><font color="white">添加学生</font></a>
 			</th>
-			<th width="0"></th>
-			<th width="0"></th>
-			<th width="0"></th>
 		</tr>
 		<tr align="center" bgcolor="#e1ffc1" >
 			<th width="75"><b>学生名称</b></th>
