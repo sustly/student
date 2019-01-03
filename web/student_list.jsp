@@ -35,12 +35,12 @@
 			</th>
 		</tr>
 		<tr align="center" bgcolor="#e1ffc1" >
-			<th width="75"><b>学生名称</b></th>
-			<th width="75"><b>性别</b></th>
-			<th width="75"><b>班级</b></th>
-			<th width="75"><b>学号</b></th>
-			<th width="150"><b>修改</b></th>
-			<th width="75"><b>删除</b></th>
+			<th width="100"><b>学生名称</b></th>
+			<th width="100"><b>性别</b></th>
+			<th width="100"><b>班级</b></th>
+			<th width="100"><b>学号</b></th>
+			<th width="100"><b>修改</b></th>
+			<th width="100"><b>删除</b></th>
 		</tr>
 			<%
 					List<StudentInfo> list = (List<StudentInfo>)request.getAttribute("list");
