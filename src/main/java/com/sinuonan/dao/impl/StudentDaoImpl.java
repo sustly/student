@@ -2,6 +2,8 @@ package com.sinuonan.dao.impl;
 
 import com.sinuonan.bean.StudentInfo;
 import com.sinuonan.dao.StudentDao;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.util.List;
@@ -23,9 +25,10 @@ public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
     }
 
     public StudentInfo findStudentByName(String name) {
-        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().find("from StudentInfo where name=?0", name);
-        StudentInfo info = list.get(0);
-        return info;
+        DetachedCriteria criteria = DetachedCriteria.forClass(StudentInfo.class);
+        criteria.add(Restrictions.eq("name",name));
+        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().findByCriteria(criteria);
+        return list.get(0);
     }
 
     public List<StudentInfo> findStudentByTeacherid(String id) {
