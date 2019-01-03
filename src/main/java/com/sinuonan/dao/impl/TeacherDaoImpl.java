@@ -9,8 +9,8 @@ import java.util.List;
 
 public class TeacherDaoImpl extends HibernateDaoSupport implements TeacherDao {
     public String findPassowrdByid(String id) {
-        String hql = "select password from TeacherInfo where id="+"'"+id+"'";
-        List<String> list = (List<String>) this.getHibernateTemplate().find(hql);
+        String hql = "select password from TeacherInfo where id=?0";
+        List<String> list = (List<String>) this.getHibernateTemplate().find(hql,id);
         if (list==null || list.size()==0){
             return null;
         }else {
