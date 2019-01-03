@@ -42,4 +42,10 @@ public class StudentServiceImpl implements StudentService {
     public void deleteStudentByName(String name) {
         dao.deleteStudentByName(name);
     }
+
+    public List<StudentInfo> findStudentByUuid(String uuid) {
+        return dao.findStudentByUuid(uuid);
+    }
+
+
 }

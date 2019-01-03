@@ -51,4 +51,11 @@ public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
         StudentInfo student = findStudentByName(name);
         this.getHibernateTemplate().delete(student);
     }
+
+    public List<StudentInfo> findStudentByUuid(String uuid) {
+        DetachedCriteria criteria = DetachedCriteria.forClass(StudentInfo.class);
+        criteria.add(Restrictions.eq("uuid",uuid));
+        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().findByCriteria(criteria);
+        return list;
+    }
 }

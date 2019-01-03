@@ -13,4 +13,6 @@ public interface StudentService {
     void updateStudentByname(String name, Integer schoolId);
 
     void deleteStudentByName(String name);
+
+    List<StudentInfo> findStudentByUuid(String uuid);
 }

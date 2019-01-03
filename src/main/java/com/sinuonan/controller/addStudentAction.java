@@ -58,4 +58,7 @@ public class addStudentAction extends ActionSupport {
 
         return SUCCESS;
     }
+    public String addStudentGo(){
+        return SUCCESS;
+    }
 }

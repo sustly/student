@@ -17,20 +17,6 @@
 <script type="text/javascript">
     function check(form){
         with(form){
-            if(schoolId.value == ""){
-                alert("请输入学号！");
-                return false;
-            }
-            if(isNaN(schoolId.value)){
-                alert("格式错误！");
-                return false;
-            }
-            self.location=document.referrer;//去另一个页面刷新
-            return true;;
-        }
-    }
-    function checkDelete(form){
-        with(form){
             self.location=document.referrer;//去另一个页面刷新
             return true;;
         }
@@ -45,7 +31,7 @@
 		</tr>
 		<tr bgcolor="#b8860b">
 			<th align="center" colspan="6" >
-				<a href="addStudent.jsp"><font color="white">添加学生</font></a>
+				<a href="${pageContext.request.contextPath}/addStudentGo"><font color="white">添加学生</font></a>
 			</th>
 		</tr>
 		<tr align="center" bgcolor="#e1ffc1" >
@@ -57,13 +43,10 @@
 			<th width="75"><b>删除</b></th>
 		</tr>
 			<%
-				// 获取图书信息集合
 					List<StudentInfo> list = (List<StudentInfo>)request.getAttribute("list");
-					// 判断集合是否有效
 					if(list == null || list.size() < 1){
 						out.print("没有数据！");
 					}else{
-						// 遍历图书集合中的数据
 						for(StudentInfo st : list){
 			%>
 				<tr align="center" bgcolor="white">
@@ -72,14 +55,10 @@
 					<td><%=st.getClassName()%></td>
 					<td><%=st.getSchoolId()%></td>
 					<td>
-						<form action="${pageContext.request.contextPath}/updateSchoolId" method="post" onsubmit="return check(this);">
-							<input type="hidden" name="name" value="<%=st.getName()%>">
-							<input type="text" name="schoolId" size="3">
-							<input type="submit" value="修改学号">
-						</form>
+						<a href= "${pageContext.request.contextPath}/updateGo?uuid=<%=st.getUuid()%>" onclick="check()">修改</a>
 					</td>
 					<td>
-						<a href="${pageContext.request.contextPath}/deleteByName?name=<%=st.getName()%>" onclick="checkDelete()">删除</a>
+						<a href="${pageContext.request.contextPath}/deleteByName?name=<%=st.getName()%>" onclick="check()">删除</a>
 					</td>
 				</tr>
 			<%
