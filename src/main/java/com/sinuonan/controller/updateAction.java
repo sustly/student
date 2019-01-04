@@ -20,19 +20,15 @@ public class updateAction extends ActionSupport {
     public void setName(String name) {
         this.name = name;
     }
-
     public void setGender(String gender) {
         this.gender = gender;
     }
-
     public void setClassName(String className) {
         this.className = className;
     }
-
     public void setSchoolId(Integer schoolId) {
         this.schoolId = schoolId;
     }
-
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
