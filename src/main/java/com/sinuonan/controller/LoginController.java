@@ -6,45 +6,35 @@ import com.sinuonan.service.StudentService;
 import com.sinuonan.service.TeacherService;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
-public class LoginAction extends ActionSupport {
-    private String id;
-    private String password;
-
+public class LoginController{
 
     @Resource(name = "teacherService")
     private TeacherService teacherService;
     @Resource(name = "StudentService")
     private StudentService studentService;
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public String login(){
-        return SUCCESS;
-    }
-
-    public String loginBy(){
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String login(@RequestParam(value = "id") String id,
+                        @RequestParam(value = "password") String password) {
         String t_password = teacherService.findPassowrdByid(id);
-        if (password.equals(t_password)){
+        if (password.equals(t_password)) {
             List<StudentInfo> list = studentService.findStudentByTeacherid(id);
             HttpServletRequest request = ServletActionContext.getRequest();
             //teacher登陆成功后将id存入session中
-            request.getSession().setAttribute("id",id);
-            request.setAttribute("list",list);
-            return SUCCESS;
-        }else {
-            this.addActionError("用户名或密码错误");
-            return ERROR;
+            request.getSession().setAttribute("id", id);
+            request.setAttribute("list", list);
+            return "student_list";
+        } else {
+            return "login";
         }
     }
 }

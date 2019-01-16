@@ -1,4 +1,3 @@
-<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -17,7 +16,6 @@
 <form action="${pageContext.request.contextPath}/teacher_login" method="post">
 <div id="login_div">
 	<h2>用户登录</h2>
-	<s:actionerror/>
     <input class="login_input" type="text" name="id" placeholder="用户名" required="" autofocus="" style="margin-top:30px; border-radius:5px;"/><br/>
     
     <br/>
