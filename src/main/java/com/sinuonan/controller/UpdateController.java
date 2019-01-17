@@ -3,12 +3,14 @@ package com.sinuonan.controller;
 import com.sinuonan.bean.StudentInfo;
 import com.sinuonan.service.StudentService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class UpdateController{
@@ -24,26 +26,26 @@ public class UpdateController{
                          @RequestParam("gender") String gender,
                          @RequestParam("className") String className,
                          @RequestParam("uuid") String uuid,
-                         HttpServletRequest request){
+                         @ModelAttribute("id") String id,
+                         Map<String, Object> map){
         StudentInfo info = new StudentInfo();
         info.setSchoolId(schoolId);
         info.setUuid(uuid);
         info.setGender(gender);
         info.setClassName(className);
         info.setName(name);
-        info.setTeacherId((String) request.getSession().getAttribute("id"));
+        info.setTeacherId(id);
         service.updateStudent(info);
-        String id = (String) request.getSession().getAttribute("id");
         List<StudentInfo> list = service.findStudentByTeacherid(id);
-        request.setAttribute("list",list);
+        map.put("list",list);
         return "student_list";
     }
 
     @RequestMapping(value = "updateGo")
-    public String updateGo(@RequestParam("uuid") String uuid,HttpServletRequest request){
+    public String updateGo(@RequestParam("uuid") String uuid, Map<String,Object> map){
         List<StudentInfo> students = service.findStudentByUuid(uuid);
         StudentInfo st = students.get(0);
-        request.setAttribute("st",st);
+        map.put("st",st);
         return "updateStudent";
     }
 }

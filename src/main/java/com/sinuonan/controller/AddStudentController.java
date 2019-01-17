@@ -3,13 +3,12 @@ package com.sinuonan.controller;
 import com.sinuonan.bean.StudentInfo;
 import com.sinuonan.service.StudentService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -31,22 +30,20 @@ public class AddStudentController {
                              @RequestParam("gender") String gender,
                              @RequestParam("className") String className,
                              @RequestParam("schoolId") Integer schoolId,
-                             HttpServletRequest request){
+                             Map<String,Object> map,
+                             @ModelAttribute(value = "id") String id){
         StudentInfo info = new StudentInfo();
         info.setClassName(className);
         info.setGender(gender);
         info.setSchoolId(schoolId);
         info.setName(name);
-        //从session中获得teacher的id
-        String teacherId = (String) request.getSession().getAttribute("id");
-        info.setTeacherId(teacherId);
+        info.setTeacherId(id);
         info.setUuid(UUID.randomUUID().toString());
 
         service.addStudent(info);
 
-        String id = (String) request.getSession().getAttribute("id");
         List<StudentInfo> list = service.findStudentByTeacherid(id);
-        request.setAttribute("list",list);
+        map.put("list",list);
 
         return "student_list";
     }
