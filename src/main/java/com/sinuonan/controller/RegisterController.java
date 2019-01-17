@@ -23,9 +23,9 @@ public class RegisterController {
             info.setId(id);
             info.setPassword(password);
             service.save(info);
-            return "login";
+            return "redirect:/login";
         }else {
-            return "register";
+            return "redirect:/register";
         }
     }
 }
