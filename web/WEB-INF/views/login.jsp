@@ -8,12 +8,12 @@
 	<!--
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link rel = "stylesheet" type = "text/css" href = "css/login.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "../../css/login.css"/>
 
 </head>
 
 <body>
-<form action="${pageContext.request.contextPath}/teacher_login" method="post">
+<form action="${pageContext.request.contextPath}/teacherLogin" method="post">
 <div id="login_div">
 	<h2>用户登录</h2>
     <input class="login_input" type="text" name="id" placeholder="用户名" required="" autofocus="" style="margin-top:30px; border-radius:5px;"/><br/>
@@ -29,7 +29,7 @@
 
   <input id="login" type="submit" value="登录"/>
 
-  <a href="register.jsp"><font color="white">注册账号</font></a>
+  <a href="${pageContext.request.contextPath}/register"><font color="white">注册账号</font></a>
 	
 	</div>
 
