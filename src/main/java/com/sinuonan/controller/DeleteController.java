@@ -1,6 +1,5 @@
 package com.sinuonan.controller;
 
-import com.opensymphony.xwork2.ActionSupport;
 import com.sinuonan.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
