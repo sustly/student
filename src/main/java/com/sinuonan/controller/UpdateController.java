@@ -33,6 +33,9 @@ public class UpdateController{
         info.setName(name);
         info.setTeacherId((String) request.getSession().getAttribute("id"));
         service.updateStudent(info);
+        String id = (String) request.getSession().getAttribute("id");
+        List<StudentInfo> list = service.findStudentByTeacherid(id);
+        request.setAttribute("list",list);
         return "student_list";
     }
 

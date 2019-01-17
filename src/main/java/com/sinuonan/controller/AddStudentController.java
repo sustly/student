@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -42,6 +43,10 @@ public class AddStudentController {
         info.setUuid(UUID.randomUUID().toString());
 
         service.addStudent(info);
+
+        String id = (String) request.getSession().getAttribute("id");
+        List<StudentInfo> list = service.findStudentByTeacherid(id);
+        request.setAttribute("list",list);
 
         return "student_list";
     }
