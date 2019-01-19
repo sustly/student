@@ -24,4 +24,6 @@
     <mvc:annotation-driven></mvc:annotation-driven>
     <!--可直接访问该视图，无需经过handler-->
     <mvc:view-controller path="/addStudent" view-name="addStudent"></mvc:view-controller>
+    <!--解决静态资源加载问题-->
+    <mvc:default-servlet-handler></mvc:default-servlet-handler>
 </beans>
