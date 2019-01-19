@@ -35,7 +35,7 @@
     </script>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/addStudent" method="post" onsubmit="return check(this);">
+<form action="${pageContext.request.contextPath}/addStudent_submit" method="post" onsubmit="return check(this);">
     <table align="center" width="450">
         <tr>
             <td align="center" colspan="2">

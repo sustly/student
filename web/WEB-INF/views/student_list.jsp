@@ -31,7 +31,7 @@
 		</tr>
 		<tr bgcolor="#b8860b">
 			<th align="center" colspan="6" >
-				<a href="${pageContext.request.contextPath}/addStudentGo"><font color="white">添加学生</font></a>
+				<a href="${pageContext.request.contextPath}/addStudent"><font color="white">添加学生</font></a>
 			</th>
 		</tr>
 		<tr align="center" bgcolor="#e1ffc1" >

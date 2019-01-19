@@ -22,4 +22,6 @@
     </bean>
     <!-- 在实际开发中通常都需配置 mvc:annotation-driven 标签 -->
     <mvc:annotation-driven></mvc:annotation-driven>
+    <!--可直接访问该视图，无需经过handler-->
+    <mvc:view-controller path="/addStudent" view-name="addStudent"></mvc:view-controller>
 </beans>

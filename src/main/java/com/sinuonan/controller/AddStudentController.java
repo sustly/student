@@ -25,7 +25,7 @@ public class AddStudentController {
      * 添加学生
      * @return
      */
-    @RequestMapping(value = "/addStudent",method = RequestMethod.POST)
+    @RequestMapping(value = "/addStudent_submit",method = RequestMethod.POST)
     public String addStudent(@RequestParam("name") String name,
                              @RequestParam("gender") String gender,
                              @RequestParam("className") String className,
@@ -47,8 +47,8 @@ public class AddStudentController {
 
         return "student_list";
     }
-    @RequestMapping(value = "/addStudentGo")
-    public String addStudentGo(){
-        return "addStudent";
-    }
+//    @RequestMapping(value = "/addStudentGo")
+//    public String addStudentGo(){
+//        return "addStudent";
+//    }
 }
