@@ -3,17 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
 http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-
-    <servlet><!-- Spring MVC 核心控制器 DispatcherServlet 配置 -->
+    <!-- Spring MVC 核心控制器 DispatcherServlet 配置 -->
+    <servlet>
         <servlet-name>SpringMVC</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <init-param><!--以下init-param是自定义SpringMVC的配置文件的位置 -->
+        <!--以下init-param是自定义SpringMVC的配置文件的位置 -->
+        <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:springMvc.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet-mapping><!-- 拦截设置 -->
+    <!-- 拦截设置 -->
+    <servlet-mapping>
         <servlet-name>SpringMVC</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
