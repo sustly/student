@@ -47,8 +47,4 @@ public class AddStudentController {
 
         return "student_list";
     }
-//    @RequestMapping(value = "/addStudentGo")
-//    public String addStudentGo(){
-//        return "addStudent";
-//    }
 }
