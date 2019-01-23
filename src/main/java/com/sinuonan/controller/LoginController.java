@@ -1,16 +1,15 @@
 package com.sinuonan.controller;
 
 import com.sinuonan.bean.StudentInfo;
+import com.sinuonan.bean.TeacherInfo;
 import com.sinuonan.service.StudentService;
 import com.sinuonan.service.TeacherService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -48,4 +47,33 @@ public class LoginController{
     public String register(){
         return "register";
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/checkUser", method = RequestMethod.POST)
+    public Map<String, Object> checkUser(@RequestParam("username")String username){
+        String passowrd = teacherService.findPassowrdByid(username);
+        Map<String, Object> map = new HashMap<String, Object>();
+        if (passowrd == null){
+            map.put("isSuccess",false);
+            map.put("Msg","用户名不正确！");
+        }else {
+            map.put("isSuccess",true);
+        }
+        return map;
+    }
+
+   /* @ResponseBody
+    @RequestMapping(value = "/checkPassWord", method = RequestMethod.POST)
+    public Map<String, Object> checkPassWord(@RequestParam("username")String username,
+                                             @RequestParam("password")String password){
+        String passowrd = teacherService.findPassowrdByid(username);
+        Map<String, Object> map = new HashMap<String, Object>();
+        if (!passowrd.equals(password)){
+            map.put("isSuccess",false);
+            map.put("Msg","密码不正确！");
+        }else {
+            map.put("isSuccess",true);
+        }
+        return map;
+    }*/
 }

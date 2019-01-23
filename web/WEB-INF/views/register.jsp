@@ -42,13 +42,13 @@
             contentType: 'application/json;charset=UTF-8',
             data:JSON.stringify(obj),
             success:function (data) {
-                if(data.isSuccess == true){
+                if(!data.isSuccess == true){
                    $("#usernameMsg").text(data.Msg).css({"color":"green"});
                 }else {
                    $("#usernameMsg").text(data.Msg).css({"color":"red"});
                 }
             }
-        })
+        });
     });
 
 </script>
