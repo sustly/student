@@ -34,7 +34,7 @@
 <script type="text/javascript">
     $("#username").blur(function () {
         var obj = {
-            username: this.value
+            id: this.value
         };
         $.ajax({
             url:"http://localhost:8082/checkId",

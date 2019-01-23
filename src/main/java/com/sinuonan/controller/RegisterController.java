@@ -33,10 +33,8 @@ public class RegisterController {
     @CrossOrigin
     @RequestMapping(value = "/checkId", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> checkId(@RequestBody String param){
-        JSONObject jsonObject = new JSONObject(param);
-        String username = (String) jsonObject.get("username");
-        String passWord = service.findPassowrdByid(username);
+    public Map<String, Object> checkId(@RequestBody TeacherInfo param){
+        String passWord = service.findPassowrdByid(param.getId());
         Map<String, Object> map = new HashMap<String, Object>();
         if (passWord == null){
             map.put("isSuccess",true);
