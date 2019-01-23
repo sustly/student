@@ -40,9 +40,10 @@ public class RegisterController {
         Map<String, Object> map = new HashMap<String, Object>();
         if (passWord == null){
             map.put("isSuccess",true);
-            map.put("Msg","keyong");
+            map.put("Msg","用户名可以使用！");
         }else {
             map.put("isSuccess",false);
+            map.put("Msg","用户名已被注册！");
         }
 
         return map;

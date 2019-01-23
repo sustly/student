@@ -17,6 +17,7 @@
 <form action="${pageContext.request.contextPath}/register" method="post">
 <div id="login_div">
 	<h2>用户注册</h2>
+    <span id="usernameMsg"></span><br/>
    <input class="login_input" type="text" name="id" placeholder="用户名" id="username" style="margin-top:30px; border-radius:5px;"/><br/>
     <br/>
     <input class="login_input" type="password" name="password" placeholder="密码"  style="margin-top:0; border-radius:5px;border-top:1px solid #ccc"/><br/>
@@ -42,11 +43,12 @@
             data:JSON.stringify(obj),
             success:function (data) {
                 if(data.isSuccess == true){
-                    $("#username").next().children().next().html(data.msg);
+                   $("#usernameMsg").text(data.Msg).css({"color":"green"});
+                }else {
+                   $("#usernameMsg").text(data.Msg).css({"color":"red"});
                 }
             }
         })
-        // alert('123456')
     });
 
 </script>
