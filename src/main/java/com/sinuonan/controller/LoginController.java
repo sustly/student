@@ -1,14 +1,12 @@
 package com.sinuonan.controller;
 
 import com.sinuonan.bean.StudentInfo;
-import com.sinuonan.bean.TeacherInfo;
 import com.sinuonan.service.StudentService;
 import com.sinuonan.service.TeacherService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,7 +60,7 @@ public class LoginController{
         return map;
     }
 
-   /* @ResponseBody
+    @ResponseBody
     @RequestMapping(value = "/checkPassWord", method = RequestMethod.POST)
     public Map<String, Object> checkPassWord(@RequestParam("username")String username,
                                              @RequestParam("password")String password){
@@ -75,5 +73,5 @@ public class LoginController{
             map.put("isSuccess",true);
         }
         return map;
-    }*/
+    }
 }

@@ -23,23 +23,20 @@
                     }
                 },"json");
             });
-            /*$("#passWord").blur(function () {
+
+            $("#passWord").blur(function () {
                 var url="http://localhost:8082/checkPassWord";
-                var param={username:$("#userName").value,password:this.value};
-                $.ajax({
-                    url:url,
-                    type:"POST",
-                    contentType: 'application/json;charset=UTF-8',
-                    data:JSON.stringify(param),
-                    success:function (data) {
-                        if(!data.isSuccess == true){
-                            $("#userMsg").text("");
-                        }else {
-                            $("#userMsg").text(data.Msg).css({"color":"red"});
-                        }
+                var name = $("#userName").val();
+                var pass = this.value;
+                var param={username:name, password:pass};
+                $.post(url, param, function (data) {
+                    if(data.isSuccess == true){
+                        $("#userMsg").text("");
+                    }else {
+                        $("#userMsg").text(data.Msg).css({"color":"red"});
                     }
-                });
-            });*/
+                },"json");
+            });
         });
     </script>
 </head>
