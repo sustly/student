@@ -43,9 +43,9 @@
             data:JSON.stringify(obj),
             success:function (data) {
                 if(!data.isSuccess == true){
-                   $("#usernameMsg").text(data.Msg).css({"color":"green"});
-                }else {
                    $("#usernameMsg").text(data.Msg).css({"color":"red"});
+                }else {
+                   $("#usernameMsg").text("");
                 }
             }
         });

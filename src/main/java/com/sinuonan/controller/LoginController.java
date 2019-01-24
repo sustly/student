@@ -1,6 +1,7 @@
 package com.sinuonan.controller;
 
 import com.sinuonan.bean.StudentInfo;
+import com.sinuonan.bean.TeacherInfo;
 import com.sinuonan.service.StudentService;
 import com.sinuonan.service.TeacherService;
 import org.springframework.stereotype.Controller;
@@ -62,11 +63,10 @@ public class LoginController{
 
     @ResponseBody
     @RequestMapping(value = "/checkPassWord", method = RequestMethod.POST)
-    public Map<String, Object> checkPassWord(@RequestParam("username")String username,
-                                             @RequestParam("password")String password){
-        String passowrd = teacherService.findPassowrdByid(username);
+    public Map<String, Object> checkPassWord(@RequestBody TeacherInfo teacherInfo){
+        String passowrd = teacherService.findPassowrdByid(teacherInfo.getId());
         Map<String, Object> map = new HashMap<String, Object>();
-        if (!passowrd.equals(password)){
+        if (!passowrd.equals(teacherInfo.getPassword())){
             map.put("isSuccess",false);
             map.put("Msg","密码不正确！");
         }else {
