@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -21,8 +22,9 @@ public class DeleteController {
     @RequestMapping(value = "/deleteByName",method = RequestMethod.GET)
     public String deleteByName(@RequestParam("name") String name,
                                Map<String,Object> map,
-                               @ModelAttribute(value = "id") String id){
+                               HttpSession session){
         service.deleteStudentByName(name);
+        String id = (String) session.getAttribute("id");
         List<StudentInfo> list = service.findStudentByTeacherid(id);
         map.put("list",list);
         return "student_list";

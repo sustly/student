@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +27,7 @@ public class UpdateController{
                          @RequestParam("gender") String gender,
                          @RequestParam("className") String className,
                          @RequestParam("uuid") String uuid,
-                         @ModelAttribute("id") String id,
+                         HttpSession session,
                          Map<String, Object> map){
         StudentInfo info = new StudentInfo();
         info.setSchoolId(schoolId);
@@ -34,6 +35,7 @@ public class UpdateController{
         info.setGender(gender);
         info.setClassName(className);
         info.setName(name);
+        String id = (String) session.getAttribute("id");
         info.setTeacherId(id);
         service.updateStudent(info);
         List<StudentInfo> list = service.findStudentByTeacherid(id);
