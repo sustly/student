@@ -25,7 +25,8 @@ public class RegisterController {
             String md5Password = md5util.MD5Encode(password);
             info.setPassword(md5Password);
             service.save(info);
-            return "redirect:/home/login";
+            //这里为什么是home/login才行？redirect:/login不是解析成目录下的jsp吗？
+            return "redirect:/login";
         }else {
             return "redirect:/register";
         }
