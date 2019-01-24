@@ -2,7 +2,7 @@ package com.sinuonan.controller;
 
 import com.sinuonan.bean.TeacherInfo;
 import com.sinuonan.service.TeacherService;
-import org.json.JSONObject;
+import com.sinuonan.util.md5.md5util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +22,8 @@ public class RegisterController {
         if (password.equals(rpassword)){
             TeacherInfo info = new TeacherInfo();
             info.setId(id);
-            info.setPassword(password);
+            String md5Password = md5util.MD5Encode(password, "utf-8");
+            info.setPassword(md5Password);
             service.save(info);
             return "redirect:/login";
         }else {

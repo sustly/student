@@ -4,6 +4,7 @@ import com.sinuonan.bean.StudentInfo;
 import com.sinuonan.bean.TeacherInfo;
 import com.sinuonan.service.StudentService;
 import com.sinuonan.service.TeacherService;
+import com.sinuonan.util.md5.md5util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,8 +31,9 @@ public class LoginController{
     public String teacherLogin(@RequestParam(value = "id") String id,
                                @RequestParam(value = "password") String password,
                                Map<String,Object> map) {
+        String md5Password = md5util.MD5Encode(password, "utf-8");
         String t_password = teacherService.findPassowrdByid(id);
-        if (password.equals(t_password)) {
+        if (md5Password.equals(t_password)) {
             List<StudentInfo> list = studentService.findStudentByTeacherid(id);
             //teacher登陆成功后将id存入session中
             map.put("id",id);
@@ -65,8 +67,9 @@ public class LoginController{
     @RequestMapping(value = "/checkPassWord", method = RequestMethod.POST)
     public Map<String, Object> checkPassWord(@RequestBody TeacherInfo teacherInfo){
         String passowrd = teacherService.findPassowrdByid(teacherInfo.getId());
+        String md5Password = md5util.MD5Encode(teacherInfo.getPassword(), "utf-8");
         Map<String, Object> map = new HashMap<String, Object>();
-        if (!passowrd.equals(teacherInfo.getPassword())){
+        if (!passowrd.equals(md5Password)){
             map.put("isSuccess",false);
             map.put("Msg","密码不正确！");
         }else {
