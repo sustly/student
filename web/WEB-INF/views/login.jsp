@@ -24,14 +24,14 @@
                 },"json");
             });
 
-            /*
-            http 415转换错误，待解决
-            $("#passWord").blur(function () {
+            //http 415转换错误，待解决
+            /*$("#passWord").blur(function () {
                 var url="http://localhost:8082/checkPassWord";
                 var name = $("#userName").val();
                 var pass = this.value;
                 var param={id:name,password:pass};
-                $.post(url, param, function (data) {
+                alert(name + "----" +pass);
+                $.post(url, JSON.stringify(param), function (data) {
                     if(data.isSuccess == true){
                         $("#userMsg").text("");
                     }else {
