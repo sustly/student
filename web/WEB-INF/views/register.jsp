@@ -20,9 +20,9 @@
     <span id="usernameMsg"></span><br/>
    <input class="login_input" type="text" name="id" placeholder="用户名" id="username" style="margin-top:30px; border-radius:5px;"/><br/>
     <br/>
-    <input class="login_input" type="password" name="password" placeholder="密码"  style="margin-top:0; border-radius:5px;border-top:1px solid #ccc"/><br/>
+    <input class="login_input" type="password" name="password" placeholder="密码" id="password" style="margin-top:0; border-radius:5px;border-top:1px solid #ccc"/><br/>
  	<br/>
-    <input class="login_input" type="password" name="rpassword" placeholder="确认密码"  style="margin-top:0; border-radius:5px;border-top:1px solid #ccc"/><br/>
+    <input class="login_input" type="password" name="rpassword" placeholder="确认密码"  id="rpassword" style="margin-top:0; border-radius:5px;border-top:1px solid #ccc"/><br/>
     
     <br/>
    
@@ -32,21 +32,52 @@
 </form>
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-    $("#username").blur(function () {
-        var obj = {
-            id: this.value
-        };
-        $.ajax({
-            url:"http://localhost:8082/checkId",
-            type:"POST",
-            contentType: 'application/json;charset=UTF-8',
-            data:JSON.stringify(obj),
-            success:function (data) {
-                if(!data.isSuccess == true){
-                   $("#usernameMsg").text(data.Msg).css({"color":"red"});
-                }else {
-                   $("#usernameMsg").text("");
+
+    $(function () {
+        $("#username").blur(function () {
+            if(this.value==""){
+                $("#usernameMsg").text("用户名不能为空！").css({"color":"red"});
+                return;
+            }
+            var obj = {
+                id: this.value
+            };
+            $.ajax({
+                url:"http://localhost:8082/checkId",
+                type:"POST",
+                contentType: 'application/json;charset=UTF-8',
+                data:JSON.stringify(obj),
+                success:function (data) {
+                    if(!data.isSuccess == true){
+                        $("#usernameMsg").text(data.Msg).css({"color":"red"});
+                    }else {
+                        $("#usernameMsg").text("");
+                    }
                 }
+            });
+        });
+
+        $("#rpassword").blur(function () {
+            var psaaword = $("#password").val();
+            var rpassword = this.value;
+            if (psaaword == rpassword) {
+                $("#usernameMsg").text("");
+                return true;
+            }else {
+                $("#usernameMsg").text("两次密码输入不一致！").css({"color":"red"});
+                return false;
+            }
+        });
+
+        $("#login").submit(function () {
+            var psaaword = $("#password").val();
+            var rpassword = this.value;
+            if (psaaword == rpassword) {
+                $("#usernameMsg").text("");
+                return true;
+            }else {
+                $("#usernameMsg").text("两次密码输入不一致！").css({"color":"red"});
+                return false;
             }
         });
     });
