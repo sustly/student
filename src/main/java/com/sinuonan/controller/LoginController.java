@@ -41,7 +41,7 @@ public class LoginController{
             map.put("list",list);
             return "student_list";
         } else {
-            return "login";
+            return "home/login";
         }
     }
 
