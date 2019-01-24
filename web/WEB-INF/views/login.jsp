@@ -24,6 +24,21 @@
                 },"json");
             });
 
+            //http 415转换错误，无法修改contentType为json
+            /*$("#passWord").blur(function () {
+                var url="http://localhost:8082/checkPassWord";
+                var name = $("#userName").val();
+                var pass = this.value;
+                var param={id:name,password:pass};
+                $.post(url, param, function (data) {
+                    if(data.isSuccess == true){
+                        $("#userMsg").text("");
+                    }else {
+                        $("#userMsg").text(data.Msg).css({"color":"red"});
+                    }
+                },"json");
+            });*/
+
             $("#passWord").blur(function () {
                 var url="http://localhost:8082/checkPassWord";
                 var name = $("#userName").val();
