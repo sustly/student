@@ -25,7 +25,7 @@ public class RegisterController {
             String md5Password = md5util.MD5Encode(password);
             info.setPassword(md5Password);
             service.save(info);
-            return "redirect:/login";
+            return "redirect:/home/login";
         }else {
             return "redirect:/register";
         }

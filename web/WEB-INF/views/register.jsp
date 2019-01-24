@@ -50,6 +50,7 @@
                 success:function (data) {
                     if(!data.isSuccess == true){
                         $("#usernameMsg").text(data.Msg).css({"color":"red"});
+                        $("#username").val("");
                     }else {
                         $("#usernameMsg").text("");
                     }
@@ -70,20 +71,20 @@
         });
 
         $("#login_form").submit(function () {
-            if($("#username").val() == null){
+            if($("#username").val() == null || $("#username").val() == "" ){
                 $("#usernameMsg").text("用户名不能为空！").css({"color":"red"});
                 return false;
             }
-            if($("#password").val() == null){
+            if($("#password").val() == null || $("#password").val() == ""){
                 $("#usernameMsg").text("密码不能为空！").css({"color":"red"});
                 return false;
             }
-            if($("#rpassword").val() == null){
+            if($("#rpassword").val() == null || $("#rpassword").val() == ""){
                 $("#usernameMsg").text("请再次输入密码！").css({"color":"red"});
                 return false;
             }
             var psaaword = $("#password").val();
-            var rpassword = this.value;
+            var rpassword = $("#rpassword").val();
             if (psaaword == rpassword) {
                 $("#usernameMsg").text("");
                 return true;
