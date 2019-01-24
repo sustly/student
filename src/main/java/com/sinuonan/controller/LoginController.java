@@ -4,7 +4,7 @@ import com.sinuonan.bean.StudentInfo;
 import com.sinuonan.bean.TeacherInfo;
 import com.sinuonan.service.StudentService;
 import com.sinuonan.service.TeacherService;
-import com.sinuonan.util.md5.md5util;
+import com.sinuonan.utils.md5.md5util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
