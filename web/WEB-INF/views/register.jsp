@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<form action="${pageContext.request.contextPath}/register" method="post">
+<form action="${pageContext.request.contextPath}/register" method="post" id="login_form">
 <div id="login_div">
 	<h2>用户注册</h2>
     <span id="usernameMsg"></span><br/>
@@ -26,7 +26,7 @@
     
     <br/>
    
-  <input id="login" type="submit" value="快速注册"/>
+  <input id="login" type="submit"  value="快速注册"/>
 
 	</div>
 </form>
@@ -69,7 +69,19 @@
             }
         });
 
-        $("#login").submit(function () {
+        $("#login_form").submit(function () {
+            if($("#username").val() == null){
+                $("#usernameMsg").text("用户名不能为空！").css({"color":"red"});
+                return false;
+            }
+            if($("#password").val() == null){
+                $("#usernameMsg").text("密码不能为空！").css({"color":"red"});
+                return false;
+            }
+            if($("#rpassword").val() == null){
+                $("#usernameMsg").text("请再次输入密码！").css({"color":"red"});
+                return false;
+            }
             var psaaword = $("#password").val();
             var rpassword = this.value;
             if (psaaword == rpassword) {
@@ -80,6 +92,8 @@
                 return false;
             }
         });
+
+
     });
 
 </script>
