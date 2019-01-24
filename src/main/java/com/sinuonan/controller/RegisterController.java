@@ -15,7 +15,7 @@ public class RegisterController {
 
     @Resource(name = "teacherService")
     private TeacherService service;
-    @RequestMapping(value = "register",method = RequestMethod.POST)
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
     public String register(@RequestParam("id") String id,
                            @RequestParam("password") String password,
                            @RequestParam("rpassword") String rpassword){
@@ -46,6 +46,10 @@ public class RegisterController {
         }
 
         return map;
+    }
+    @RequestMapping(value = "registerUser")
+    public String registerUser(){
+        return "/register";
     }
 
 }

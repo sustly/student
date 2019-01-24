@@ -13,7 +13,7 @@
     <script type="application/javascript">
         $(function () {
             $("#userName").blur(function () {
-                var url="http://localhost:8082/checkUser";
+                var url="http://localhost:8082/home/checkUser";
                 var param={username:this.value};
                 $.post(url, param, function (data) {
                     if(data.isSuccess == true){
@@ -40,7 +40,7 @@
             });*/
 
             $("#passWord").blur(function () {
-                var url="http://localhost:8082/checkPassWord";
+                var url="http://localhost:8082/home/checkPassWord";
                 var name = $("#userName").val();
                 var pass = this.value;
                 var param={id:name,password:pass};
@@ -64,7 +64,7 @@
 </head>
 
 <body>
-<form action="${pageContext.request.contextPath}/teacherLogin" method="post">
+<form action="${pageContext.request.contextPath}/home/teacherLogin" method="post">
 <div id="login_div">
 	<h2>用户登录</h2>
     <span id="userMsg"></span><br/>
@@ -81,7 +81,7 @@
 
   <input id="login" type="submit" value="登录"/>
 
-  <a href="${pageContext.request.contextPath}/register"><font color="white">注册账号</font></a>
+  <a href="${pageContext.request.contextPath}/registerUser"><font color="white">注册账号</font></a>
 	
 	</div>
 

@@ -21,15 +21,30 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
     <!-- 在实际开发中通常都需配置 mvc:annotation-driven 标签 -->
-    <!--<mvc:annotation-driven/>-->
+    <mvc:annotation-driven/>
 
     <!--可直接访问该视图，无需经过handler-->
     <mvc:view-controller path="/addStudent" view-name="addStudent"></mvc:view-controller>
     <!--解决静态资源加载问题-->
     <mvc:default-servlet-handler></mvc:default-servlet-handler>
 
-
-    <!--<mvc:annotation-driven></mvc:annotation-driven>-->
-    <mvc:annotation-driven/>
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/home/**"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/registerUser"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/checkId"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/register"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/**/fonts/*"/>
+            <mvc:exclude-mapping path="/**/*.css"/>
+            <mvc:exclude-mapping path="/**/*.js"/>
+            <mvc:exclude-mapping path="/**/*.png"/>
+            <mvc:exclude-mapping path="/**/*.gif"/>
+            <mvc:exclude-mapping path="/**/*.jpg"/>
+            <mvc:exclude-mapping path="/**/*.jpeg"/>
+            <bean class="com.sinuonan.interceptors.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

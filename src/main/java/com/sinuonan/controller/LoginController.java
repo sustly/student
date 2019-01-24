@@ -15,6 +15,7 @@ import java.util.Map;
 
 @SessionAttributes(value = "id")
 @Controller
+@RequestMapping(value = "home")
 public class LoginController{
 
     @Resource(name = "teacherService")
