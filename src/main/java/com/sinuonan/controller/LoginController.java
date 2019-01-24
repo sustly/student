@@ -31,7 +31,7 @@ public class LoginController{
     public String teacherLogin(@RequestParam(value = "id") String id,
                                @RequestParam(value = "password") String password,
                                Map<String,Object> map) {
-        String md5Password = md5util.MD5Encode(password, "utf-8");
+        String md5Password = md5util.MD5Encode(password);
         String t_password = teacherService.findPassowrdByid(id);
         if (md5Password.equals(t_password)) {
             List<StudentInfo> list = studentService.findStudentByTeacherid(id);
@@ -67,7 +67,7 @@ public class LoginController{
     @RequestMapping(value = "/checkPassWord", method = RequestMethod.POST)
     public Map<String, Object> checkPassWord(@RequestBody TeacherInfo teacherInfo){
         String passowrd = teacherService.findPassowrdByid(teacherInfo.getId());
-        String md5Password = md5util.MD5Encode(teacherInfo.getPassword(), "utf-8");
+        String md5Password = md5util.MD5Encode(teacherInfo.getPassword());
         Map<String, Object> map = new HashMap<String, Object>();
         if (!passowrd.equals(md5Password)){
             map.put("isSuccess",false);

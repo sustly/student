@@ -27,6 +27,10 @@ public class md5util {
         return resultString;
     }
 
+    public static String MD5Encode(String origin){
+        return MD5Encode(origin, "utf-8");
+    }
+
 
     private static String byteArrayToHexString(byte b[]){
         StringBuffer resultSb = new StringBuffer();
