@@ -1,6 +1,6 @@
-package com.sinuonan.dao;
+package com.sustly.dao;
 
-import com.sinuonan.bean.StudentInfo;
+import com.sustly.bean.StudentInfo;
 
 import java.util.List;
 

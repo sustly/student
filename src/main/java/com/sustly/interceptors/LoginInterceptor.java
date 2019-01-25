@@ -1,4 +1,4 @@
-package com.sinuonan.interceptors;
+package com.sustly.interceptors;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

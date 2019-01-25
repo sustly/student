@@ -1,7 +1,7 @@
-package com.sinuonan.dao.impl;
+package com.sustly.dao.impl;
 
-import com.sinuonan.bean.StudentInfo;
-import com.sinuonan.dao.StudentDao;
+import com.sustly.bean.StudentInfo;
+import com.sustly.dao.StudentDao;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;

@@ -1,6 +1,6 @@
-package com.sinuonan.service;
+package com.sustly.service;
 
-import com.sinuonan.bean.StudentInfo;
+import com.sustly.bean.StudentInfo;
 
 import java.util.List;
 

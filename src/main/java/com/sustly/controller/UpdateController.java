@@ -1,14 +1,12 @@
-package com.sinuonan.controller;
+package com.sustly.controller;
 
-import com.sinuonan.bean.StudentInfo;
-import com.sinuonan.service.StudentService;
+import com.sustly.bean.StudentInfo;
+import com.sustly.service.StudentService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;

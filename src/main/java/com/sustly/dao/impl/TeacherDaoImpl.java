@@ -1,8 +1,7 @@
-package com.sinuonan.dao.impl;
+package com.sustly.dao.impl;
 
-import com.sinuonan.bean.StudentInfo;
-import com.sinuonan.bean.TeacherInfo;
-import com.sinuonan.dao.TeacherDao;
+import com.sustly.bean.TeacherInfo;
+import com.sustly.dao.TeacherDao;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.util.List;

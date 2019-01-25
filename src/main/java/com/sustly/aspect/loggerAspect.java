@@ -1,4 +1,4 @@
-package com.sinuonan.aspect;
+package com.sustly.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -20,7 +20,7 @@ public class loggerAspect {
     /**
      * 定义切点位置
      */
-    @Pointcut(value = "execution(* com.sinuonan.dao.impl..*(..))")
+    @Pointcut(value = "execution(* com.sustly.dao.impl..*(..))")
     public void pointCut() {
     }
 

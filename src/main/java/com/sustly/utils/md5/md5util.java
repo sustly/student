@@ -1,4 +1,4 @@
-package com.sinuonan.utils.md5;
+package com.sustly.utils.md5;
 
 import java.security.MessageDigest;
 

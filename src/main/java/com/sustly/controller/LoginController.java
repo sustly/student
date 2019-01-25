@@ -1,10 +1,10 @@
-package com.sinuonan.controller;
+package com.sustly.controller;
 
-import com.sinuonan.bean.StudentInfo;
-import com.sinuonan.bean.TeacherInfo;
-import com.sinuonan.service.StudentService;
-import com.sinuonan.service.TeacherService;
-import com.sinuonan.utils.md5.md5util;
+import com.sustly.bean.StudentInfo;
+import com.sustly.bean.TeacherInfo;
+import com.sustly.service.StudentService;
+import com.sustly.service.TeacherService;
+import com.sustly.utils.md5.md5util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

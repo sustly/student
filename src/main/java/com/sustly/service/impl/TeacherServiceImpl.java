@@ -1,14 +1,12 @@
-package com.sinuonan.service.impl;
+package com.sustly.service.impl;
 
-import com.sinuonan.bean.StudentInfo;
-import com.sinuonan.bean.TeacherInfo;
-import com.sinuonan.dao.TeacherDao;
-import com.sinuonan.service.TeacherService;
+import com.sustly.bean.TeacherInfo;
+import com.sustly.dao.TeacherDao;
+import com.sustly.service.TeacherService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
-import java.util.List;
 
 @Service("teacherService")
 @Transactional

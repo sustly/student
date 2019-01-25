@@ -1,8 +1,8 @@
-package com.sinuonan.service.impl;
+package com.sustly.service.impl;
 
-import com.sinuonan.bean.StudentInfo;
-import com.sinuonan.dao.StudentDao;
-import com.sinuonan.service.StudentService;
+import com.sustly.bean.StudentInfo;
+import com.sustly.dao.StudentDao;
+import com.sustly.service.StudentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

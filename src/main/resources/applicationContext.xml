@@ -20,10 +20,10 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
-    <bean id="StudentDao" class="com.sinuonan.dao.impl.StudentDaoImpl">
+    <bean id="StudentDao" class="com.sustly.dao.impl.StudentDaoImpl">
         <property name="hibernateTemplate" ref="hibernateTemplate"></property>
     </bean>
-    <bean id="teacherDao" class="com.sinuonan.dao.impl.TeacherDaoImpl">
+    <bean id="teacherDao" class="com.sustly.dao.impl.TeacherDaoImpl">
         <property name="hibernateTemplate" ref="hibernateTemplate"></property>
     </bean>
     <!--定义事务-->

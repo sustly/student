@@ -1,4 +1,4 @@
-package com.sinuonan.bean;
+package com.sustly.bean;
 
 import javax.persistence.*;
 

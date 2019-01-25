@@ -54,8 +54,8 @@
 
     <!-- ##########################BO对象映射配置########################### -->
 
-    <mapping class="com.sinuonan.bean.StudentInfo"/>
-    <mapping class="com.sinuonan.bean.TeacherInfo"/>
+    <mapping class="com.sustly.bean.StudentInfo"/>
+    <mapping class="com.sustly.bean.TeacherInfo"/>
 
   </session-factory>
 </hibernate-configuration>
