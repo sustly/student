@@ -2,7 +2,7 @@ package com.sustly.controller;
 
 import com.sustly.bean.TeacherInfo;
 import com.sustly.service.TeacherService;
-import com.sustly.utils.md5.md5util;
+import com.sustly.utils.md5.Md5Util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +22,7 @@ public class RegisterController {
         if (password.equals(rpassword)){
             TeacherInfo info = new TeacherInfo();
             info.setId(id);
-            String md5Password = md5util.MD5Encode(password);
+            String md5Password = Md5Util.MD5Encode(password);
             info.setPassword(md5Password);
             service.save(info);
             //这里是home/login才行,redirect是重定向到Controller

@@ -4,7 +4,7 @@ import com.sustly.bean.StudentInfo;
 import com.sustly.bean.TeacherInfo;
 import com.sustly.service.StudentService;
 import com.sustly.service.TeacherService;
-import com.sustly.utils.md5.md5util;
+import com.sustly.utils.md5.Md5Util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,7 +32,7 @@ public class LoginController{
     public String teacherLogin(@RequestParam(value = "id") String id,
                                @RequestParam(value = "password") String password,
                                Map<String,Object> map) {
-        String md5Password = md5util.MD5Encode(password);
+        String md5Password = Md5Util.MD5Encode(password);
         String t_password = teacherService.findPassowrdByid(id);
         if (md5Password.equals(t_password)) {
             List<StudentInfo> list = studentService.findStudentByTeacherid(id);
@@ -68,7 +68,7 @@ public class LoginController{
     @RequestMapping(value = "/checkPassWord", method = RequestMethod.POST)
     public Map<String, Object> checkPassWord(@RequestBody TeacherInfo teacherInfo){
         String passowrd = teacherService.findPassowrdByid(teacherInfo.getId());
-        String md5Password = md5util.MD5Encode(teacherInfo.getPassword());
+        String md5Password = Md5Util.MD5Encode(teacherInfo.getPassword());
         Map<String, Object> map = new HashMap<String, Object>();
         if (!passowrd.equals(md5Password)){
             map.put("isSuccess",false);
