@@ -25,7 +25,7 @@ public class RegisterController {
             String md5Password = md5util.MD5Encode(password);
             info.setPassword(md5Password);
             service.save(info);
-            //这里是home/login才行,redirect是重定向到url
+            //这里是home/login才行,redirect是重定向到Controller
             return "redirect:/home/login";
         }else {
             return "redirect:/register";
