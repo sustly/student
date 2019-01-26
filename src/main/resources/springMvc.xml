@@ -10,8 +10,6 @@
                  http://www.springframework.org/schema/context/spring-context-4.0.xsd
                 http://www.springframework.org/schema/mvc
                 http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
-    <!--開啟註解-->
-    <!--<context:annotation-config/>-->
     <!-- 配置自定扫描的包 -->
     <context:component-scan base-package="com.sustly.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:include-filter>
