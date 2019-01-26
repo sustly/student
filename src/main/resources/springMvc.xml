@@ -13,7 +13,10 @@
     <!--開啟註解-->
     <!--<context:annotation-config/>-->
     <!-- 配置自定扫描的包 -->
-    <context:component-scan base-package="com.sustly.controller"></context:component-scan>
+    <context:component-scan base-package="com.sustly.controller" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:include-filter>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"></context:include-filter>
+    </context:component-scan>
 
     <!-- 配置视图解析器: 如何把 handler 方法返回值解析为实际的物理视图 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
