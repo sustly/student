@@ -29,7 +29,7 @@
     <!--解决静态资源加载问题-->
     <mvc:default-servlet-handler></mvc:default-servlet-handler>
 
-    <!-- 静态资源映射 -->
+    <!-- 静态资源映射 有了拦截器通配符不好使-->
     <mvc:resources mapping="/css/**" location="/css/"></mvc:resources>
     <mvc:resources mapping="/js/**" location="/js/"></mvc:resources>
     <mvc:resources mapping="/image/**" location="/image/"></mvc:resources>
@@ -39,6 +39,12 @@
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/home/**"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/**/*.css"/>
+            <mvc:exclude-mapping path="/**/*.js"/>
+            <mvc:exclude-mapping path="/**/*.png"/>
+            <mvc:exclude-mapping path="/**/*.gif"/>
+            <mvc:exclude-mapping path="/**/*.jpg"/>
+            <mvc:exclude-mapping path="/**/*.jpeg"/>
             <mvc:exclude-mapping path="/registerUser"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/checkId"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/register"></mvc:exclude-mapping>

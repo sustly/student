@@ -8,7 +8,7 @@
 	<!--
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link rel = "stylesheet" type = "text/css" href = "../../css/login.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "/css/login.css"/>
     <script type="application/javascript" src="/js/jquery-3.3.1.min.js"></script>
     <script type="application/javascript">
         $(function () {
