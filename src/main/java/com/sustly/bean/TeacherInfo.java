@@ -1,11 +1,14 @@
 package com.sustly.bean;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "teacher_info", schema = "student", catalog = "")
 public class TeacherInfo {
     private String id;
+    @JSONField(serialize = false)
     private String password;
 
     @Id
