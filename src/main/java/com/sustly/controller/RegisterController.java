@@ -32,7 +32,6 @@ public class RegisterController {
         }
     }
 
-    @CrossOrigin
     @RequestMapping(value = "/checkId", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> checkId(@RequestBody TeacherInfo param){

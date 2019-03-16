@@ -23,7 +23,7 @@ public class AddStudentController {
 
     /**
      * 添加学生
-     * @return
+     * @return view
      */
     @RequestMapping(value = "/addStudent_submit",method = RequestMethod.POST)
     public String addStudent(@RequestParam("name") String name,

@@ -48,7 +48,7 @@
             <mvc:exclude-mapping path="/registerUser"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/checkId"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/register"></mvc:exclude-mapping>
-            <bean class="com.sustly.interceptors.LoginInterceptor"></bean>
+            <bean class="com.sustly.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
 

@@ -1,21 +1,19 @@
 package com.sustly.aspect;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
 @Component("loggerAspect")
+@Slf4j
 @Aspect
 public class loggerAspect {
-
-    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     /**
      * 定义切点位置

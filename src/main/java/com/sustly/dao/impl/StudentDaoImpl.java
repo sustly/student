@@ -8,6 +8,7 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
 
     public void addStudent(StudentInfo st) {
@@ -55,7 +56,6 @@ public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
     public List<StudentInfo> findStudentByUuid(String uuid) {
         DetachedCriteria criteria = DetachedCriteria.forClass(StudentInfo.class);
         criteria.add(Restrictions.eq("uuid",uuid));
-        List<StudentInfo> list = (List<StudentInfo>) this.getHibernateTemplate().findByCriteria(criteria);
-        return list;
+        return (List<StudentInfo>) this.getHibernateTemplate().findByCriteria(criteria);
     }
 }

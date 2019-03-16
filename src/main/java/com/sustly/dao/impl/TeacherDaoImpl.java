@@ -6,6 +6,7 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class TeacherDaoImpl extends HibernateDaoSupport implements TeacherDao {
     public String findPassowrdByid(String id) {
         String hql = "select password from TeacherInfo where id=?0";
