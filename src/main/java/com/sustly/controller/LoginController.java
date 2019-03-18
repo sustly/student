@@ -5,6 +5,7 @@ import com.sustly.bean.TeacherInfo;
 import com.sustly.service.StudentService;
 import com.sustly.service.TeacherService;
 import com.sustly.utils.md5.Md5Util;
+import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,9 +33,9 @@ public class LoginController{
     public String teacherLogin(@RequestParam(value = "id") String id,
                                @RequestParam(value = "password") String password,
                                Map<String,Object> map) {
-        String md5Password = Md5Util.MD5Encode(password);
+        Md5Hash md5Hash = new Md5Hash(password, id, 3);
         String t_password = teacherService.findPassowrdByid(id);
-        if (md5Password.equals(t_password)) {
+        if (md5Hash.equals(t_password)) {
             List<StudentInfo> list = studentService.findStudentByTeacherid(id);
             //teacher登陆成功后将id存入session中
             map.put("id",id);
