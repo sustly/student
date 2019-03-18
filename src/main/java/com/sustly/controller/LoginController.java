@@ -33,6 +33,7 @@ public class LoginController{
     public String teacherLogin(@RequestParam(value = "id") String id,
                                @RequestParam(value = "password") String password,
                                Map<String,Object> map) {
+        //shiro md5加密
         Md5Hash md5Hash = new Md5Hash(password, id, 3);
         String t_password = teacherService.findPassowrdByid(id);
         if (md5Hash.equals(t_password)) {
